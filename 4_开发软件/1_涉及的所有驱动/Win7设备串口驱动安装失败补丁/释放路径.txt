@@ -1,0 +1,3 @@
+1.将mdmcpq.inf复制到c:\windows\inf
+2.将usbser.sys复制到c:\windows\system32\drivers
+3.运行“DapLinkSer/SETUP.EXE”安装CDC驱动

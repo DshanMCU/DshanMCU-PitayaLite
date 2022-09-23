@@ -1,0 +1,1636 @@
+Component: ARM Compiler 6.14.1 Tool: armlink [5e4cc100]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text.main) refers to drv_sysclk.o(.text.SystemClockConfig) for SystemClockConfig
+    main.o(.text.main) refers to drv_systick.o(.text.Drv_SysTick_Config) for Drv_SysTick_Config
+    main.o(.text.main) refers to drv_led.o(.text.Drv_LED_Init) for Drv_LED_Init
+    main.o(.text.main) refers to drv_led.o(.text.Drv_LED_Write) for Drv_LED_Write
+    main.o(.text.main) refers to drv_systick.o(.text.HAL_Delay) for HAL_Delay
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    drv_led.o(.text.Drv_LED_Init) refers to hal_rcc.o(.text.RCC_EnableAHB1Periphs) for RCC_EnableAHB1Periphs
+    drv_led.o(.text.Drv_LED_Init) refers to hal_gpio.o(.text.GPIO_Init) for GPIO_Init
+    drv_led.o(.text.Drv_LED_Init) refers to hal_gpio.o(.text.GPIO_WriteBit) for GPIO_WriteBit
+    drv_led.o(.ARM.exidx.text.Drv_LED_Init) refers to drv_led.o(.text.Drv_LED_Init) for [Anonymous Symbol]
+    drv_led.o(.text.Drv_LED_Write) refers to hal_gpio.o(.text.GPIO_WriteBit) for GPIO_WriteBit
+    drv_led.o(.ARM.exidx.text.Drv_LED_Write) refers to drv_led.o(.text.Drv_LED_Write) for [Anonymous Symbol]
+    drv_sysclk.o(.ARM.exidx.text.SystemClockConfig) refers to drv_sysclk.o(.text.SystemClockConfig) for [Anonymous Symbol]
+    drv_sysclk.o(.ARM.exidx.text.Drv_GetSysClockFreq) refers to drv_sysclk.o(.text.Drv_GetSysClockFreq) for [Anonymous Symbol]
+    drv_systick.o(.text.Drv_SysTick_Config) refers to drv_sysclk.o(.text.Drv_GetSysClockFreq) for Drv_GetSysClockFreq
+    drv_systick.o(.ARM.exidx.text.Drv_SysTick_Config) refers to drv_systick.o(.text.Drv_SysTick_Config) for [Anonymous Symbol]
+    drv_systick.o(.text.SysTick_Handler) refers to drv_systick.o(.bss.uwTick) for uwTick
+    drv_systick.o(.ARM.exidx.text.SysTick_Handler) refers to drv_systick.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    drv_systick.o(.text.HAL_GetTick) refers to drv_systick.o(.bss.uwTick) for uwTick
+    drv_systick.o(.ARM.exidx.text.HAL_GetTick) refers to drv_systick.o(.text.HAL_GetTick) for [Anonymous Symbol]
+    drv_systick.o(.text.HAL_Delay) refers to drv_systick.o(.bss.uwTick) for uwTick
+    drv_systick.o(.ARM.exidx.text.HAL_Delay) refers to drv_systick.o(.text.HAL_Delay) for [Anonymous Symbol]
+    startup_mm32f3277g.o(RESET) refers to startup_mm32f3277g.o(.text) for Reset_Handler
+    startup_mm32f3277g.o(RESET) refers to drv_systick.o(.text.SysTick_Handler) for SysTick_Handler
+    startup_mm32f3277g.o(.text) refers to system_mm32f3277g.o(.text.SystemInit) for SystemInit
+    startup_mm32f3277g.o(.text) refers to __main.o(!!!main) for __main
+    system_mm32f3277g.o(.ARM.exidx.text.SystemInit) refers to system_mm32f3277g.o(.text.SystemInit) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_Init) refers to hal_adc.o(.text.ADC_Init) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_Enable) refers to hal_adc.o(.text.ADC_Enable) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_EnableTempSensor) refers to hal_adc.o(.text.ADC_EnableTempSensor) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_EnableVoltSensor) refers to hal_adc.o(.text.ADC_EnableVoltSensor) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_EnableDMA) refers to hal_adc.o(.text.ADC_EnableDMA) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_EnableInterrupts) refers to hal_adc.o(.text.ADC_EnableInterrupts) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_GetStatus) refers to hal_adc.o(.text.ADC_GetStatus) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_ClearStatus) refers to hal_adc.o(.text.ADC_ClearStatus) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_GetConvResult) refers to hal_adc.o(.text.ADC_GetConvResult) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_GetChnConvResult) refers to hal_adc.o(.text.ADC_GetChnConvResult) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_SetChnSampleTime) refers to hal_adc.o(.text.ADC_SetChnSampleTime) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_EnableHwTrigger) refers to hal_adc.o(.text.ADC_EnableHwTrigger) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_EnableRegSeq) refers to hal_adc.o(.text.ADC_EnableRegSeq) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_EnableAnySeq) refers to hal_adc.o(.text.ADC_EnableAnySeq) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_DoSwTrigger) refers to hal_adc.o(.text.ADC_DoSwTrigger) for [Anonymous Symbol]
+    hal_adc.o(.ARM.exidx.text.ADC_EnableHwComp) refers to hal_adc.o(.text.ADC_EnableHwComp) for [Anonymous Symbol]
+    hal_comp.o(.ARM.exidx.text.COMP_Init) refers to hal_comp.o(.text.COMP_Init) for [Anonymous Symbol]
+    hal_comp.o(.ARM.exidx.text.COMP_Enable) refers to hal_comp.o(.text.COMP_Enable) for [Anonymous Symbol]
+    hal_comp.o(.ARM.exidx.text.COMP_Lock) refers to hal_comp.o(.text.COMP_Lock) for [Anonymous Symbol]
+    hal_comp.o(.ARM.exidx.text.COMP_GetOutputStatus) refers to hal_comp.o(.text.COMP_GetOutputStatus) for [Anonymous Symbol]
+    hal_comp.o(.ARM.exidx.text.COMP_EnableExtVrefConf) refers to hal_comp.o(.text.COMP_EnableExtVrefConf) for [Anonymous Symbol]
+    hal_comp.o(.ARM.exidx.text.COMP_EnableRoundRobinConf) refers to hal_comp.o(.text.COMP_EnableRoundRobinConf) for [Anonymous Symbol]
+    hal_comp.o(.ARM.exidx.text.COMP_GetRoundRobinOutStatus) refers to hal_comp.o(.text.COMP_GetRoundRobinOutStatus) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_Init) refers to hal_dac.o(.text.DAC_Init) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_Enable) refers to hal_dac.o(.text.DAC_Enable) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_GetData) refers to hal_dac.o(.text.DAC_GetData) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_PutData) refers to hal_dac.o(.text.DAC_PutData) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_PutDualChannelData8bRightAlign) refers to hal_dac.o(.text.DAC_PutDualChannelData8bRightAlign) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_PutData8bRightAlign) refers to hal_dac.o(.text.DAC_PutData8bRightAlign) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_PutData12bLeftAlign) refers to hal_dac.o(.text.DAC_PutData12bLeftAlign) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_PutData12bRightAlign) refers to hal_dac.o(.text.DAC_PutData12bRightAlign) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_PutDualChannelData12bLeftAlign) refers to hal_dac.o(.text.DAC_PutDualChannelData12bLeftAlign) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_PutDualChannelData12bRightAlign) refers to hal_dac.o(.text.DAC_PutDualChannelData12bRightAlign) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_EnableAddNoise) refers to hal_dac.o(.text.DAC_EnableAddNoise) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_EnableAddTriangle) refers to hal_dac.o(.text.DAC_EnableAddTriangle) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_EnableDMA) refers to hal_dac.o(.text.DAC_EnableDMA) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_DoSwTrigger) refers to hal_dac.o(.text.DAC_DoSwTrigger) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_DoDualChannelSwTrigger) refers to hal_dac.o(.text.DAC_DoDualChannelSwTrigger) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_GetDataRegAddr) refers to hal_dac.o(.text.DAC_GetDataRegAddr) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_GetDualChannelData8bRegAddr) refers to hal_dac.o(.text.DAC_GetDualChannelData8bRegAddr) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_GetData8bRegAddr) refers to hal_dac.o(.text.DAC_GetData8bRegAddr) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_GetData12bLeftRegAddr) refers to hal_dac.o(.text.DAC_GetData12bLeftRegAddr) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_GetData12bRightRegAddr) refers to hal_dac.o(.text.DAC_GetData12bRightRegAddr) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_GetDualChannelData12bLeftRegAddr) refers to hal_dac.o(.text.DAC_GetDualChannelData12bLeftRegAddr) for [Anonymous Symbol]
+    hal_dac.o(.ARM.exidx.text.DAC_GetDualChannelData12bRightRegAddr) refers to hal_dac.o(.text.DAC_GetDualChannelData12bRightRegAddr) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.DMA_InitChannel) refers to hal_dma.o(.text.DMA_InitChannel) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.DMA_EnableChannelInterrupts) refers to hal_dma.o(.text.DMA_EnableChannelInterrupts) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.DMA_GetChannelInterruptStatus) refers to hal_dma.o(.text.DMA_GetChannelInterruptStatus) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.DMA_ClearChannelInterruptStatus) refers to hal_dma.o(.text.DMA_ClearChannelInterruptStatus) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.DMA_EnableChannel) refers to hal_dma.o(.text.DMA_EnableChannel) for [Anonymous Symbol]
+    hal_exti.o(.ARM.exidx.text.EXTI_EnableLineInterrupt) refers to hal_exti.o(.text.EXTI_EnableLineInterrupt) for [Anonymous Symbol]
+    hal_exti.o(.ARM.exidx.text.EXTI_EnableLineEvent) refers to hal_exti.o(.text.EXTI_EnableLineEvent) for [Anonymous Symbol]
+    hal_exti.o(.ARM.exidx.text.EXTI_SetTriggerIn) refers to hal_exti.o(.text.EXTI_SetTriggerIn) for [Anonymous Symbol]
+    hal_exti.o(.ARM.exidx.text.EXTI_DoSwTrigger) refers to hal_exti.o(.text.EXTI_DoSwTrigger) for [Anonymous Symbol]
+    hal_exti.o(.ARM.exidx.text.EXTI_GetLineStatus) refers to hal_exti.o(.text.EXTI_GetLineStatus) for [Anonymous Symbol]
+    hal_exti.o(.ARM.exidx.text.EXTI_ClearLineStatus) refers to hal_exti.o(.text.EXTI_ClearLineStatus) for [Anonymous Symbol]
+    hal_fsmc.o(.ARM.exidx.text.FSMC_Init) refers to hal_fsmc.o(.text.FSMC_Init) for [Anonymous Symbol]
+    hal_fsmc.o(.ARM.exidx.text.FSMC_SetConf) refers to hal_fsmc.o(.text.FSMC_SetConf) for [Anonymous Symbol]
+    hal_fsmc.o(.ARM.exidx.text.FSMC_EnableConf) refers to hal_fsmc.o(.text.FSMC_EnableConf) for [Anonymous Symbol]
+    hal_fsmc.o(.text.FSMC_PutData32) refers to hal_fsmc.o(.rodata.FSMC_BankBases) for FSMC_BankBases
+    hal_fsmc.o(.ARM.exidx.text.FSMC_PutData32) refers to hal_fsmc.o(.text.FSMC_PutData32) for [Anonymous Symbol]
+    hal_fsmc.o(.text.FSMC_GetData32) refers to hal_fsmc.o(.rodata.FSMC_BankBases) for FSMC_BankBases
+    hal_fsmc.o(.ARM.exidx.text.FSMC_GetData32) refers to hal_fsmc.o(.text.FSMC_GetData32) for [Anonymous Symbol]
+    hal_fsmc.o(.text.FSMC_GetXferDataRegAddr) refers to hal_fsmc.o(.rodata.FSMC_BankBases) for FSMC_BankBases
+    hal_fsmc.o(.ARM.exidx.text.FSMC_GetXferDataRegAddr) refers to hal_fsmc.o(.text.FSMC_GetXferDataRegAddr) for [Anonymous Symbol]
+    hal_fsmc.o(.text.FSMC_PutData16) refers to hal_fsmc.o(.rodata.FSMC_BankBases) for FSMC_BankBases
+    hal_fsmc.o(.ARM.exidx.text.FSMC_PutData16) refers to hal_fsmc.o(.text.FSMC_PutData16) for [Anonymous Symbol]
+    hal_fsmc.o(.text.FSMC_GetData16) refers to hal_fsmc.o(.rodata.FSMC_BankBases) for FSMC_BankBases
+    hal_fsmc.o(.ARM.exidx.text.FSMC_GetData16) refers to hal_fsmc.o(.text.FSMC_GetData16) for [Anonymous Symbol]
+    hal_fsmc.o(.text.FSMC_PutData8) refers to hal_fsmc.o(.rodata.FSMC_BankBases) for FSMC_BankBases
+    hal_fsmc.o(.ARM.exidx.text.FSMC_PutData8) refers to hal_fsmc.o(.text.FSMC_PutData8) for [Anonymous Symbol]
+    hal_fsmc.o(.text.FSMC_GetData8) refers to hal_fsmc.o(.rodata.FSMC_BankBases) for FSMC_BankBases
+    hal_fsmc.o(.ARM.exidx.text.FSMC_GetData8) refers to hal_fsmc.o(.text.FSMC_GetData8) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_Init) refers to hal_gpio.o(.text.GPIO_Init) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_ReadInDataBit) refers to hal_gpio.o(.text.GPIO_ReadInDataBit) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_ReadInData) refers to hal_gpio.o(.text.GPIO_ReadInData) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_ReadOutDataBit) refers to hal_gpio.o(.text.GPIO_ReadOutDataBit) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_ReadOutData) refers to hal_gpio.o(.text.GPIO_ReadOutData) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_SetBits) refers to hal_gpio.o(.text.GPIO_SetBits) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_ClearBits) refers to hal_gpio.o(.text.GPIO_ClearBits) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_WriteBit) refers to hal_gpio.o(.text.GPIO_WriteBit) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_WriteBits) refers to hal_gpio.o(.text.GPIO_WriteBits) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_PinLock) refers to hal_gpio.o(.text.GPIO_PinLock) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_PinLockConf) refers to hal_gpio.o(.text.GPIO_PinLockConf) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_PinAFConf) refers to hal_gpio.o(.text.GPIO_PinAFConf) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.GPIO_PortAFConfig) refers to hal_gpio.o(.text.GPIO_PortAFConfig) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_InitMaster) refers to hal_i2c.o(.text.I2C_InitMaster) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_Enable) refers to hal_i2c.o(.text.I2C_Enable) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_SetTargetAddr) refers to hal_i2c.o(.text.I2C_SetTargetAddr) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_GetTargetAddr) refers to hal_i2c.o(.text.I2C_GetTargetAddr) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_PutData) refers to hal_i2c.o(.text.I2C_PutData) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_PrepareToGetData) refers to hal_i2c.o(.text.I2C_PrepareToGetData) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_GetData) refers to hal_i2c.o(.text.I2C_GetData) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_GetStatus) refers to hal_i2c.o(.text.I2C_GetStatus) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_Stop) refers to hal_i2c.o(.text.I2C_Stop) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_EnableInterrupts) refers to hal_i2c.o(.text.I2C_EnableInterrupts) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_GetEnabledInterrupts) refers to hal_i2c.o(.text.I2C_GetEnabledInterrupts) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_GetInterruptStatus) refers to hal_i2c.o(.text.I2C_GetInterruptStatus) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_ClearInterruptStatus) refers to hal_i2c.o(.text.I2C_ClearInterruptStatus) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_MasterWriteBlocking) refers to hal_i2c.o(.text.I2C_MasterWriteBlocking) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_MasterReadBlocking) refers to hal_i2c.o(.text.I2C_MasterReadBlocking) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_MasterXfer) refers to hal_i2c.o(.text.I2C_MasterXfer) for [Anonymous Symbol]
+    hal_i2c.o(.ARM.exidx.text.I2C_MasterXferHandler) refers to hal_i2c.o(.text.I2C_MasterXferHandler) for [Anonymous Symbol]
+    hal_iwdg.o(.ARM.exidx.text.IWDG_Init) refers to hal_iwdg.o(.text.IWDG_Init) for [Anonymous Symbol]
+    hal_iwdg.o(.ARM.exidx.text.IWDG_DoReload) refers to hal_iwdg.o(.text.IWDG_DoReload) for [Anonymous Symbol]
+    hal_iwdg.o(.ARM.exidx.text.IWDG_Start) refers to hal_iwdg.o(.text.IWDG_Start) for [Anonymous Symbol]
+    hal_iwdg.o(.ARM.exidx.text.IWDG_GetStatus) refers to hal_iwdg.o(.text.IWDG_GetStatus) for [Anonymous Symbol]
+    hal_iwdg.o(.ARM.exidx.text.IWDG_EnableInterrupts) refers to hal_iwdg.o(.text.IWDG_EnableInterrupts) for [Anonymous Symbol]
+    hal_iwdg.o(.ARM.exidx.text.IWDG_ClearStatus) refers to hal_iwdg.o(.text.IWDG_ClearStatus) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_EnableAHB1Periphs) refers to hal_rcc.o(.text.RCC_EnableAHB1Periphs) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_EnableAHB2Periphs) refers to hal_rcc.o(.text.RCC_EnableAHB2Periphs) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_EnableAHB3Periphs) refers to hal_rcc.o(.text.RCC_EnableAHB3Periphs) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_EnableAPB1Periphs) refers to hal_rcc.o(.text.RCC_EnableAPB1Periphs) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_EnableAPB2Periphs) refers to hal_rcc.o(.text.RCC_EnableAPB2Periphs) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_ResetAHB1Periphs) refers to hal_rcc.o(.text.RCC_ResetAHB1Periphs) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_ResetAHB2Periphs) refers to hal_rcc.o(.text.RCC_ResetAHB2Periphs) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_ResetAHB3Periphs) refers to hal_rcc.o(.text.RCC_ResetAHB3Periphs) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_ResetAPB1Periphs) refers to hal_rcc.o(.text.RCC_ResetAPB1Periphs) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_ResetAPB2Periphs) refers to hal_rcc.o(.text.RCC_ResetAPB2Periphs) for [Anonymous Symbol]
+    hal_rcc.o(.ARM.exidx.text.RCC_MCOConf) refers to hal_rcc.o(.text.RCC_MCOConf) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_Init) refers to hal_rtc.o(.text.RTC_Init) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_EnableAccess) refers to hal_rtc.o(.text.RTC_EnableAccess) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_EnableReset) refers to hal_rtc.o(.text.RTC_EnableReset) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_GetStatus) refers to hal_rtc.o(.text.RTC_GetStatus) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_ClearStatus) refers to hal_rtc.o(.text.RTC_ClearStatus) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_GetClockStatus) refers to hal_rtc.o(.text.RTC_GetClockStatus) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_Enable) refers to hal_rtc.o(.text.RTC_Enable) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_EnableConf) refers to hal_rtc.o(.text.RTC_EnableConf) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_PutPrescalerData) refers to hal_rtc.o(.text.RTC_PutPrescalerData) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_PutCounterData) refers to hal_rtc.o(.text.RTC_PutCounterData) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_PutAlarmData) refers to hal_rtc.o(.text.RTC_PutAlarmData) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_GetCounterData) refers to hal_rtc.o(.text.RTC_GetCounterData) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_GetAlarmData) refers to hal_rtc.o(.text.RTC_GetAlarmData) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_EnableInterrupts) refers to hal_rtc.o(.text.RTC_EnableInterrupts) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_GetInterruptStatus) refers to hal_rtc.o(.text.RTC_GetInterruptStatus) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_ClearInterruptStatus) refers to hal_rtc.o(.text.RTC_ClearInterruptStatus) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_GetEnabledInterrupts) refers to hal_rtc.o(.text.RTC_GetEnabledInterrupts) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_JudgeLeapYear) refers to hal_rtc.o(.text.RTC_JudgeLeapYear) for [Anonymous Symbol]
+    hal_rtc.o(.text.RTC_SetTimeBlocking) refers to hal_rtc.o(.rodata.month_table) for month_table
+    hal_rtc.o(.ARM.exidx.text.RTC_SetTimeBlocking) refers to hal_rtc.o(.text.RTC_SetTimeBlocking) for [Anonymous Symbol]
+    hal_rtc.o(.text.RTC_CalcTimeBlocking) refers to hal_rtc.o(.rodata.month_table) for month_table
+    hal_rtc.o(.ARM.exidx.text.RTC_CalcTimeBlocking) refers to hal_rtc.o(.text.RTC_CalcTimeBlocking) for [Anonymous Symbol]
+    hal_rtc.o(.ARM.exidx.text.RTC_SetAlarmBlocking) refers to hal_rtc.o(.text.RTC_SetAlarmBlocking) for [Anonymous Symbol]
+    hal_rtc.o(.text.RTC_TimeHandler) refers to hal_rtc.o(.text.RTC_CalcTimeBlocking) for RTC_CalcTimeBlocking
+    hal_rtc.o(.ARM.exidx.text.RTC_TimeHandler) refers to hal_rtc.o(.text.RTC_TimeHandler) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_Init) refers to hal_sdio.o(.text.SDIO_Init) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_Enable) refers to hal_sdio.o(.text.SDIO_Enable) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_SetDataBusWidth) refers to hal_sdio.o(.text.SDIO_SetDataBusWidth) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_GetStatus) refers to hal_sdio.o(.text.SDIO_GetStatus) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_ClearStatus) refers to hal_sdio.o(.text.SDIO_ClearStatus) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_EnableInterrupts) refers to hal_sdio.o(.text.SDIO_EnableInterrupts) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_EnableFifoDMA) refers to hal_sdio.o(.text.SDIO_EnableFifoDMA) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_ExecuteCmd) refers to hal_sdio.o(.text.SDIO_ExecuteCmd) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_ExecuteData) refers to hal_sdio.o(.text.SDIO_ExecuteData) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_RequestResp) refers to hal_sdio.o(.text.SDIO_RequestResp) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_PutFifoData) refers to hal_sdio.o(.text.SDIO_PutFifoData) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_GetFifoData) refers to hal_sdio.o(.text.SDIO_GetFifoData) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_ClearFifoData) refers to hal_sdio.o(.text.SDIO_ClearFifoData) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_SwitchFifoWrite) refers to hal_sdio.o(.text.SDIO_SwitchFifoWrite) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_SetFifoWatermark) refers to hal_sdio.o(.text.SDIO_SetFifoWatermark) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_SetMultiBlockCount) refers to hal_sdio.o(.text.SDIO_SetMultiBlockCount) for [Anonymous Symbol]
+    hal_sdio.o(.ARM.exidx.text.SDIO_EnableFifoReadWait) refers to hal_sdio.o(.text.SDIO_EnableFifoReadWait) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_SetBaudrate) refers to hal_spi.o(.text.SPI_SetBaudrate) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_InitMaster) refers to hal_spi.o(.text.SPI_InitMaster) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_Enable) refers to hal_spi.o(.text.SPI_Enable) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_GetStatus) refers to hal_spi.o(.text.SPI_GetStatus) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_EnableInterrupts) refers to hal_spi.o(.text.SPI_EnableInterrupts) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_GetInterruptStatus) refers to hal_spi.o(.text.SPI_GetInterruptStatus) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_ClearInterruptStatus) refers to hal_spi.o(.text.SPI_ClearInterruptStatus) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_PutData) refers to hal_spi.o(.text.SPI_PutData) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_GetData) refers to hal_spi.o(.text.SPI_GetData) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_EnableDMA) refers to hal_spi.o(.text.SPI_EnableDMA) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_GetEnabledInterrupts) refers to hal_spi.o(.text.SPI_GetEnabledInterrupts) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_GetRxDataRegAddr) refers to hal_spi.o(.text.SPI_GetRxDataRegAddr) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_GetTxDataRegAddr) refers to hal_spi.o(.text.SPI_GetTxDataRegAddr) for [Anonymous Symbol]
+    hal_spi.o(.ARM.exidx.text.SPI_EnableCS) refers to hal_spi.o(.text.SPI_EnableCS) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetBootMemMode) refers to hal_syscfg.o(.text.SYSCFG_SetBootMemMode) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetFSMCPinUseMode) refers to hal_syscfg.o(.text.SYSCFG_SetFSMCPinUseMode) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetFSMCMode) refers to hal_syscfg.o(.text.SYSCFG_SetFSMCMode) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetExtIntMux) refers to hal_syscfg.o(.text.SYSCFG_SetExtIntMux) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetI2C0PortMode) refers to hal_syscfg.o(.text.SYSCFG_SetI2C0PortMode) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetI2C1PortMode) refers to hal_syscfg.o(.text.SYSCFG_SetI2C1PortMode) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetENETPortMode) refers to hal_syscfg.o(.text.SYSCFG_SetENETPortMode) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetENETSpeedMode) refers to hal_syscfg.o(.text.SYSCFG_SetENETSpeedMode) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_EnablePVD) refers to hal_syscfg.o(.text.SYSCFG_EnablePVD) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_EnableVDT) refers to hal_syscfg.o(.text.SYSCFG_EnableVDT) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_EnableADCCheckVBatDiv3) refers to hal_syscfg.o(.text.SYSCFG_EnableADCCheckVBatDiv3) for [Anonymous Symbol]
+    hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetVOSDelayValue) refers to hal_syscfg.o(.text.SYSCFG_SetVOSDelayValue) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_Init) refers to hal_tim_16b.o(.text.TIM_16B_Init) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_Start) refers to hal_tim_16b.o(.text.TIM_16B_Start) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_Stop) refers to hal_tim_16b.o(.text.TIM_16B_Stop) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_GetCounterValue) refers to hal_tim_16b.o(.text.TIM_16B_GetCounterValue) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_ClearCounterValue) refers to hal_tim_16b.o(.text.TIM_16B_ClearCounterValue) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableInterrupts) refers to hal_tim_16b.o(.text.TIM_16B_EnableInterrupts) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableDMA) refers to hal_tim_16b.o(.text.TIM_16B_EnableDMA) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_DoSwTrigger) refers to hal_tim_16b.o(.text.TIM_16B_DoSwTrigger) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_GetInterruptStatus) refers to hal_tim_16b.o(.text.TIM_16B_GetInterruptStatus) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_ClearInterruptStatus) refers to hal_tim_16b.o(.text.TIM_16B_ClearInterruptStatus) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableOutputCompare) refers to hal_tim_16b.o(.text.TIM_16B_EnableOutputCompare) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_PutChannelValue) refers to hal_tim_16b.o(.text.TIM_16B_PutChannelValue) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableInputCapture) refers to hal_tim_16b.o(.text.TIM_16B_EnableInputCapture) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_GetChannelValue) refers to hal_tim_16b.o(.text.TIM_16B_GetChannelValue) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableDeadArea) refers to hal_tim_16b.o(.text.TIM_16B_EnableDeadArea) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableMasterMode) refers to hal_tim_16b.o(.text.TIM_16B_EnableMasterMode) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableSlaveMode) refers to hal_tim_16b.o(.text.TIM_16B_EnableSlaveMode) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableExtTriggerIn) refers to hal_tim_16b.o(.text.TIM_16B_EnableExtTriggerIn) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableDMABurst) refers to hal_tim_16b.o(.text.TIM_16B_EnableDMABurst) for [Anonymous Symbol]
+    hal_tim_16b.o(.ARM.exidx.text.TIM_16B_GetEncoder) refers to hal_tim_16b.o(.text.TIM_16B_GetEncoder) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_Init) refers to hal_tim_32b.o(.text.TIM_32B_Init) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_Start) refers to hal_tim_32b.o(.text.TIM_32B_Start) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_Stop) refers to hal_tim_32b.o(.text.TIM_32B_Stop) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_GetCounterValue) refers to hal_tim_32b.o(.text.TIM_32B_GetCounterValue) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_ClearCounterValue) refers to hal_tim_32b.o(.text.TIM_32B_ClearCounterValue) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableInterrupts) refers to hal_tim_32b.o(.text.TIM_32B_EnableInterrupts) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableDMA) refers to hal_tim_32b.o(.text.TIM_32B_EnableDMA) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_DoSwTrigger) refers to hal_tim_32b.o(.text.TIM_32B_DoSwTrigger) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_GetInterruptStatus) refers to hal_tim_32b.o(.text.TIM_32B_GetInterruptStatus) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_ClearInterruptStatus) refers to hal_tim_32b.o(.text.TIM_32B_ClearInterruptStatus) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableOutputCompare) refers to hal_tim_32b.o(.text.TIM_32B_EnableOutputCompare) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_PutChannelValue) refers to hal_tim_32b.o(.text.TIM_32B_PutChannelValue) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableInputCapture) refers to hal_tim_32b.o(.text.TIM_32B_EnableInputCapture) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_GetChannelValue) refers to hal_tim_32b.o(.text.TIM_32B_GetChannelValue) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableDeadArea) refers to hal_tim_32b.o(.text.TIM_32B_EnableDeadArea) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableMasterMode) refers to hal_tim_32b.o(.text.TIM_32B_EnableMasterMode) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableSlaveMode) refers to hal_tim_32b.o(.text.TIM_32B_EnableSlaveMode) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableExtTriggerIn) refers to hal_tim_32b.o(.text.TIM_32B_EnableExtTriggerIn) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableDMABurst) refers to hal_tim_32b.o(.text.TIM_32B_EnableDMABurst) for [Anonymous Symbol]
+    hal_tim_32b.o(.ARM.exidx.text.TIM_32B_GetEncoder) refers to hal_tim_32b.o(.text.TIM_32B_GetEncoder) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_Init) refers to hal_tim_adv.o(.text.TIM_ADV_Init) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_Start) refers to hal_tim_adv.o(.text.TIM_ADV_Start) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_Stop) refers to hal_tim_adv.o(.text.TIM_ADV_Stop) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_GetCounterValue) refers to hal_tim_adv.o(.text.TIM_ADV_GetCounterValue) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_ClearCounterValue) refers to hal_tim_adv.o(.text.TIM_ADV_ClearCounterValue) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableInterrupts) refers to hal_tim_adv.o(.text.TIM_ADV_EnableInterrupts) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableDMA) refers to hal_tim_adv.o(.text.TIM_ADV_EnableDMA) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_DoSwTrigger) refers to hal_tim_adv.o(.text.TIM_ADV_DoSwTrigger) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_GetInterruptStatus) refers to hal_tim_adv.o(.text.TIM_ADV_GetInterruptStatus) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_ClearInterruptStatus) refers to hal_tim_adv.o(.text.TIM_ADV_ClearInterruptStatus) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableOutputCompare) refers to hal_tim_adv.o(.text.TIM_ADV_EnableOutputCompare) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_PutChannelValue) refers to hal_tim_adv.o(.text.TIM_ADV_PutChannelValue) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableOutputCompareSwitch) refers to hal_tim_adv.o(.text.TIM_ADV_EnableOutputCompareSwitch) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableInputCapture) refers to hal_tim_adv.o(.text.TIM_ADV_EnableInputCapture) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_GetChannelValue) refers to hal_tim_adv.o(.text.TIM_ADV_GetChannelValue) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableDeadArea) refers to hal_tim_adv.o(.text.TIM_ADV_EnableDeadArea) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableMasterMode) refers to hal_tim_adv.o(.text.TIM_ADV_EnableMasterMode) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableSlaveMode) refers to hal_tim_adv.o(.text.TIM_ADV_EnableSlaveMode) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableExtTriggerIn) refers to hal_tim_adv.o(.text.TIM_ADV_EnableExtTriggerIn) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableDMABurst) refers to hal_tim_adv.o(.text.TIM_ADV_EnableDMABurst) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_GetEncoder) refers to hal_tim_adv.o(.text.TIM_ADV_GetEncoder) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_SetRepCounter) refers to hal_tim_adv.o(.text.TIM_ADV_SetRepCounter) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_GetRepCounterValue) refers to hal_tim_adv.o(.text.TIM_ADV_GetRepCounterValue) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableIdleOut) refers to hal_tim_adv.o(.text.TIM_ADV_EnableIdleOut) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableLock) refers to hal_tim_adv.o(.text.TIM_ADV_EnableLock) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableBreakIn) refers to hal_tim_adv.o(.text.TIM_ADV_EnableBreakIn) for [Anonymous Symbol]
+    hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnablePWMShift) refers to hal_tim_adv.o(.text.TIM_ADV_EnablePWMShift) for [Anonymous Symbol]
+    hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_Init) refers to hal_tim_basic.o(.text.TIM_BASIC_Init) for [Anonymous Symbol]
+    hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_Start) refers to hal_tim_basic.o(.text.TIM_BASIC_Start) for [Anonymous Symbol]
+    hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_Stop) refers to hal_tim_basic.o(.text.TIM_BASIC_Stop) for [Anonymous Symbol]
+    hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_GetCounterValue) refers to hal_tim_basic.o(.text.TIM_BASIC_GetCounterValue) for [Anonymous Symbol]
+    hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_EnableInterrupts) refers to hal_tim_basic.o(.text.TIM_BASIC_EnableInterrupts) for [Anonymous Symbol]
+    hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_EnableDMA) refers to hal_tim_basic.o(.text.TIM_BASIC_EnableDMA) for [Anonymous Symbol]
+    hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_DoSwTrigger) refers to hal_tim_basic.o(.text.TIM_BASIC_DoSwTrigger) for [Anonymous Symbol]
+    hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_GetInterruptStatus) refers to hal_tim_basic.o(.text.TIM_BASIC_GetInterruptStatus) for [Anonymous Symbol]
+    hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_ClearInterruptStatus) refers to hal_tim_basic.o(.text.TIM_BASIC_ClearInterruptStatus) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_Init) refers to hal_uart.o(.text.UART_Init) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_Enable) refers to hal_uart.o(.text.UART_Enable) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_EnableInterrupts) refers to hal_uart.o(.text.UART_EnableInterrupts) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_GetEnabledInterrupts) refers to hal_uart.o(.text.UART_GetEnabledInterrupts) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_EnableDMA) refers to hal_uart.o(.text.UART_EnableDMA) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_PutData) refers to hal_uart.o(.text.UART_PutData) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_GetData) refers to hal_uart.o(.text.UART_GetData) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_GetStatus) refers to hal_uart.o(.text.UART_GetStatus) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_GetInterruptStatus) refers to hal_uart.o(.text.UART_GetInterruptStatus) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_ClearInterruptStatus) refers to hal_uart.o(.text.UART_ClearInterruptStatus) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_GetRxDataRegAddr) refers to hal_uart.o(.text.UART_GetRxDataRegAddr) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.UART_GetTxDataRegAddr) refers to hal_uart.o(.text.UART_GetTxDataRegAddr) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_SetBufDespTableAddr) refers to hal_usb.o(.text.USB_SetBufDespTableAddr) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_InitDevice) refers to hal_usb.o(.text.USB_InitDevice) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_SetDeviceAddr) refers to hal_usb.o(.text.USB_SetDeviceAddr) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_Enable) refers to hal_usb.o(.text.USB_Enable) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_EnableInterrupts) refers to hal_usb.o(.text.USB_EnableInterrupts) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetEnabledInterrupts) refers to hal_usb.o(.text.USB_GetEnabledInterrupts) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetInterruptStatus) refers to hal_usb.o(.text.USB_GetInterruptStatus) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_ClearInterruptStatus) refers to hal_usb.o(.text.USB_ClearInterruptStatus) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_EnableErrInterrupts) refers to hal_usb.o(.text.USB_EnableErrInterrupts) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetEnabledErrInterrupts) refers to hal_usb.o(.text.USB_GetEnabledErrInterrupts) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetErrInterruptStatus) refers to hal_usb.o(.text.USB_GetErrInterruptStatus) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_ClearErrInterruptStatus) refers to hal_usb.o(.text.USB_ClearErrInterruptStatus) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetBufDespIndex) refers to hal_usb.o(.text.USB_GetBufDespIndex) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_EnableOddEvenReset) refers to hal_usb.o(.text.USB_EnableOddEvenReset) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_EnableResumeSignal) refers to hal_usb.o(.text.USB_EnableResumeSignal) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_EnableSuspend) refers to hal_usb.o(.text.USB_EnableSuspend) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetDeviceAddr) refers to hal_usb.o(.text.USB_GetDeviceAddr) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetBufDespTableAddr) refers to hal_usb.o(.text.USB_GetBufDespTableAddr) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetFrameNumber) refers to hal_usb.o(.text.USB_GetFrameNumber) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetBufDesp) refers to hal_usb.o(.text.USB_GetBufDesp) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_BufDesp_GetTokenPid) refers to hal_usb.o(.text.USB_BufDesp_GetTokenPid) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_BufDesp_GetPacketAddr) refers to hal_usb.o(.text.USB_BufDesp_GetPacketAddr) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_BufDesp_GetPacketSize) refers to hal_usb.o(.text.USB_BufDesp_GetPacketSize) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_BufDesp_Reset) refers to hal_usb.o(.text.USB_BufDesp_Reset) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetEndPointIndex) refers to hal_usb.o(.text.USB_GetEndPointIndex) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetXferDirection) refers to hal_usb.o(.text.USB_GetXferDirection) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetBufDespOddEven) refers to hal_usb.o(.text.USB_GetBufDespOddEven) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_BufDesp_Xfer) refers to hal_usb.o(.text.USB_BufDesp_Xfer) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_BufDesp_IsBusy) refers to hal_usb.o(.text.USB_BufDesp_IsBusy) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_EnableEndPoint) refers to hal_usb.o(.text.USB_EnableEndPoint) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_EnableEndPointStall) refers to hal_usb.o(.text.USB_EnableEndPointStall) for [Anonymous Symbol]
+    hal_usb.o(.ARM.exidx.text.USB_GetEnabledEndPointStall) refers to hal_usb.o(.text.USB_GetEnabledEndPointStall) for [Anonymous Symbol]
+    hal_wwdg.o(.ARM.exidx.text.WWDG_Init) refers to hal_wwdg.o(.text.WWDG_Init) for [Anonymous Symbol]
+    hal_wwdg.o(.ARM.exidx.text.WWDG_Start) refers to hal_wwdg.o(.text.WWDG_Start) for [Anonymous Symbol]
+    hal_wwdg.o(.ARM.exidx.text.WWDG_Reload) refers to hal_wwdg.o(.text.WWDG_Reload) for [Anonymous Symbol]
+    hal_wwdg.o(.ARM.exidx.text.WWDG_EnableInterrupts) refers to hal_wwdg.o(.text.WWDG_EnableInterrupts) for [Anonymous Symbol]
+    hal_wwdg.o(.ARM.exidx.text.WWDG_GetStatus) refers to hal_wwdg.o(.text.WWDG_GetStatus) for [Anonymous Symbol]
+    hal_wwdg.o(.ARM.exidx.text.WWDG_ClearStatus) refers to hal_wwdg.o(.text.WWDG_ClearStatus) for [Anonymous Symbol]
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry7.o(.ARM.Collect$$rtentry$$00000007) for __rt_entry_sh
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(.text.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    __rtentry7.o(.ARM.Collect$$rtentry$$00000007) refers to __rtentry7.o(.ARM.Collect$$rtentry$$00002718) for __lit__00000000
+    __rtentry7.o(__vectab_stack_and_reset_2_area) refers to __main.o(!!!main) for __main
+    __rtentry7.o(.ARM.exidx) refers to __rtentry7.o(.ARM.Collect$$rtentry$$00000007) for .ARM.Collect$$rtentry$$00000007
+    __rtentry7.o(.ARM.exidx) refers to __rtentry7.o(.ARM.Collect$$rtentry$$00002718) for .ARM.Collect$$rtentry$$00002718
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to sys_stackheap.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    sys_stackheap.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_stackheap.o(.text) refers to use_no_semi.o(.text) for __I$use$semihosting
+    sys_stackheap_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_stackheap_hlt.o(.text) refers to use_no_semi.o(.text) for __I$use$semihosting
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit5.o(.ARM.Collect$$libinit$$00000008) refers to libinit5.o(.ARM.Collect$$libinit$$00002719) for __lit__00000000
+    libinit5.o(.ARM.Collect$$libinit$$0000002A) refers to libinit5.o(.ARM.Collect$$libinit$$0000273B) for __lit__00000002
+    libinit5.o(.ARM.Collect$$libinit$$0000002A) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_exit_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_command_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_wrch_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing drv_led.o(.text), (0 bytes).
+    Removing drv_led.o(.ARM.exidx.text.Drv_LED_Init), (8 bytes).
+    Removing drv_led.o(.ARM.exidx.text.Drv_LED_Write), (8 bytes).
+    Removing drv_sysclk.o(.text), (0 bytes).
+    Removing drv_sysclk.o(.ARM.exidx.text.SystemClockConfig), (8 bytes).
+    Removing drv_sysclk.o(.ARM.exidx.text.Drv_GetSysClockFreq), (8 bytes).
+    Removing drv_systick.o(.text), (0 bytes).
+    Removing drv_systick.o(.ARM.exidx.text.Drv_SysTick_Config), (8 bytes).
+    Removing drv_systick.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing drv_systick.o(.text.HAL_GetTick), (12 bytes).
+    Removing drv_systick.o(.ARM.exidx.text.HAL_GetTick), (8 bytes).
+    Removing drv_systick.o(.ARM.exidx.text.HAL_Delay), (8 bytes).
+    Removing system_mm32f3277g.o(.text), (0 bytes).
+    Removing system_mm32f3277g.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing hal_adc.o(.text), (0 bytes).
+    Removing hal_adc.o(.text.ADC_Init), (80 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_Init), (8 bytes).
+    Removing hal_adc.o(.text.ADC_Enable), (12 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_Enable), (8 bytes).
+    Removing hal_adc.o(.text.ADC_EnableTempSensor), (14 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_EnableTempSensor), (8 bytes).
+    Removing hal_adc.o(.text.ADC_EnableVoltSensor), (14 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_EnableVoltSensor), (8 bytes).
+    Removing hal_adc.o(.text.ADC_EnableDMA), (14 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_EnableDMA), (8 bytes).
+    Removing hal_adc.o(.text.ADC_EnableInterrupts), (130 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_EnableInterrupts), (8 bytes).
+    Removing hal_adc.o(.text.ADC_GetStatus), (38 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_GetStatus), (8 bytes).
+    Removing hal_adc.o(.text.ADC_ClearStatus), (38 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_ClearStatus), (8 bytes).
+    Removing hal_adc.o(.text.ADC_GetConvResult), (22 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_GetConvResult), (8 bytes).
+    Removing hal_adc.o(.text.ADC_GetChnConvResult), (20 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_GetChnConvResult), (8 bytes).
+    Removing hal_adc.o(.text.ADC_SetChnSampleTime), (50 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_SetChnSampleTime), (8 bytes).
+    Removing hal_adc.o(.text.ADC_EnableHwTrigger), (72 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_EnableHwTrigger), (8 bytes).
+    Removing hal_adc.o(.text.ADC_EnableRegSeq), (30 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_EnableRegSeq), (8 bytes).
+    Removing hal_adc.o(.text.ADC_EnableAnySeq), (130 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_EnableAnySeq), (8 bytes).
+    Removing hal_adc.o(.text.ADC_DoSwTrigger), (14 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_DoSwTrigger), (8 bytes).
+    Removing hal_adc.o(.text.ADC_EnableHwComp), (44 bytes).
+    Removing hal_adc.o(.ARM.exidx.text.ADC_EnableHwComp), (8 bytes).
+    Removing hal_comp.o(.text), (0 bytes).
+    Removing hal_comp.o(.text.COMP_Init), (86 bytes).
+    Removing hal_comp.o(.ARM.exidx.text.COMP_Init), (8 bytes).
+    Removing hal_comp.o(.text.COMP_Enable), (22 bytes).
+    Removing hal_comp.o(.ARM.exidx.text.COMP_Enable), (8 bytes).
+    Removing hal_comp.o(.text.COMP_Lock), (20 bytes).
+    Removing hal_comp.o(.ARM.exidx.text.COMP_Lock), (8 bytes).
+    Removing hal_comp.o(.text.COMP_GetOutputStatus), (18 bytes).
+    Removing hal_comp.o(.ARM.exidx.text.COMP_GetOutputStatus), (8 bytes).
+    Removing hal_comp.o(.text.COMP_EnableExtVrefConf), (30 bytes).
+    Removing hal_comp.o(.ARM.exidx.text.COMP_EnableExtVrefConf), (8 bytes).
+    Removing hal_comp.o(.text.COMP_EnableRoundRobinConf), (56 bytes).
+    Removing hal_comp.o(.ARM.exidx.text.COMP_EnableRoundRobinConf), (8 bytes).
+    Removing hal_comp.o(.text.COMP_GetRoundRobinOutStatus), (36 bytes).
+    Removing hal_comp.o(.ARM.exidx.text.COMP_GetRoundRobinOutStatus), (8 bytes).
+    Removing hal_dac.o(.text), (0 bytes).
+    Removing hal_dac.o(.text.DAC_Init), (56 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_Init), (8 bytes).
+    Removing hal_dac.o(.text.DAC_Enable), (24 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_Enable), (8 bytes).
+    Removing hal_dac.o(.text.DAC_GetData), (26 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_GetData), (8 bytes).
+    Removing hal_dac.o(.text.DAC_PutData), (144 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_PutData), (8 bytes).
+    Removing hal_dac.o(.text.DAC_PutDualChannelData8bRightAlign), (4 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_PutDualChannelData8bRightAlign), (8 bytes).
+    Removing hal_dac.o(.text.DAC_PutData8bRightAlign), (22 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_PutData8bRightAlign), (8 bytes).
+    Removing hal_dac.o(.text.DAC_PutData12bLeftAlign), (22 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_PutData12bLeftAlign), (8 bytes).
+    Removing hal_dac.o(.text.DAC_PutData12bRightAlign), (22 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_PutData12bRightAlign), (8 bytes).
+    Removing hal_dac.o(.text.DAC_PutDualChannelData12bLeftAlign), (4 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_PutDualChannelData12bLeftAlign), (8 bytes).
+    Removing hal_dac.o(.text.DAC_PutDualChannelData12bRightAlign), (4 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_PutDualChannelData12bRightAlign), (8 bytes).
+    Removing hal_dac.o(.text.DAC_EnableAddNoise), (50 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_EnableAddNoise), (8 bytes).
+    Removing hal_dac.o(.text.DAC_EnableAddTriangle), (50 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_EnableAddTriangle), (8 bytes).
+    Removing hal_dac.o(.text.DAC_EnableDMA), (26 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_EnableDMA), (8 bytes).
+    Removing hal_dac.o(.text.DAC_DoSwTrigger), (14 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_DoSwTrigger), (8 bytes).
+    Removing hal_dac.o(.text.DAC_DoDualChannelSwTrigger), (10 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_DoDualChannelSwTrigger), (8 bytes).
+    Removing hal_dac.o(.text.DAC_GetDataRegAddr), (82 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_GetDataRegAddr), (8 bytes).
+    Removing hal_dac.o(.text.DAC_GetDualChannelData8bRegAddr), (4 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_GetDualChannelData8bRegAddr), (8 bytes).
+    Removing hal_dac.o(.text.DAC_GetData8bRegAddr), (18 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_GetData8bRegAddr), (8 bytes).
+    Removing hal_dac.o(.text.DAC_GetData12bLeftRegAddr), (18 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_GetData12bLeftRegAddr), (8 bytes).
+    Removing hal_dac.o(.text.DAC_GetData12bRightRegAddr), (18 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_GetData12bRightRegAddr), (8 bytes).
+    Removing hal_dac.o(.text.DAC_GetDualChannelData12bLeftRegAddr), (4 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_GetDualChannelData12bLeftRegAddr), (8 bytes).
+    Removing hal_dac.o(.text.DAC_GetDualChannelData12bRightRegAddr), (4 bytes).
+    Removing hal_dac.o(.ARM.exidx.text.DAC_GetDualChannelData12bRightRegAddr), (8 bytes).
+    Removing hal_dma.o(.text), (0 bytes).
+    Removing hal_dma.o(.text.DMA_InitChannel), (132 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.DMA_InitChannel), (8 bytes).
+    Removing hal_dma.o(.text.DMA_EnableChannelInterrupts), (26 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.DMA_EnableChannelInterrupts), (8 bytes).
+    Removing hal_dma.o(.text.DMA_GetChannelInterruptStatus), (12 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.DMA_GetChannelInterruptStatus), (8 bytes).
+    Removing hal_dma.o(.text.DMA_ClearChannelInterruptStatus), (14 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.DMA_ClearChannelInterruptStatus), (8 bytes).
+    Removing hal_dma.o(.text.DMA_EnableChannel), (20 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.DMA_EnableChannel), (8 bytes).
+    Removing hal_exti.o(.text), (0 bytes).
+    Removing hal_exti.o(.text.EXTI_EnableLineInterrupt), (16 bytes).
+    Removing hal_exti.o(.ARM.exidx.text.EXTI_EnableLineInterrupt), (8 bytes).
+    Removing hal_exti.o(.text.EXTI_EnableLineEvent), (16 bytes).
+    Removing hal_exti.o(.ARM.exidx.text.EXTI_EnableLineEvent), (8 bytes).
+    Removing hal_exti.o(.text.EXTI_SetTriggerIn), (82 bytes).
+    Removing hal_exti.o(.ARM.exidx.text.EXTI_SetTriggerIn), (8 bytes).
+    Removing hal_exti.o(.text.EXTI_DoSwTrigger), (4 bytes).
+    Removing hal_exti.o(.ARM.exidx.text.EXTI_DoSwTrigger), (8 bytes).
+    Removing hal_exti.o(.text.EXTI_GetLineStatus), (4 bytes).
+    Removing hal_exti.o(.ARM.exidx.text.EXTI_GetLineStatus), (8 bytes).
+    Removing hal_exti.o(.text.EXTI_ClearLineStatus), (8 bytes).
+    Removing hal_exti.o(.ARM.exidx.text.EXTI_ClearLineStatus), (8 bytes).
+    Removing hal_fsmc.o(.text), (0 bytes).
+    Removing hal_fsmc.o(.text.FSMC_Init), (26 bytes).
+    Removing hal_fsmc.o(.ARM.exidx.text.FSMC_Init), (8 bytes).
+    Removing hal_fsmc.o(.text.FSMC_SetConf), (132 bytes).
+    Removing hal_fsmc.o(.ARM.exidx.text.FSMC_SetConf), (8 bytes).
+    Removing hal_fsmc.o(.text.FSMC_EnableConf), (16 bytes).
+    Removing hal_fsmc.o(.ARM.exidx.text.FSMC_EnableConf), (8 bytes).
+    Removing hal_fsmc.o(.text.FSMC_PutData32), (16 bytes).
+    Removing hal_fsmc.o(.ARM.exidx.text.FSMC_PutData32), (8 bytes).
+    Removing hal_fsmc.o(.text.FSMC_GetData32), (16 bytes).
+    Removing hal_fsmc.o(.ARM.exidx.text.FSMC_GetData32), (8 bytes).
+    Removing hal_fsmc.o(.text.FSMC_GetXferDataRegAddr), (16 bytes).
+    Removing hal_fsmc.o(.ARM.exidx.text.FSMC_GetXferDataRegAddr), (8 bytes).
+    Removing hal_fsmc.o(.text.FSMC_PutData16), (16 bytes).
+    Removing hal_fsmc.o(.ARM.exidx.text.FSMC_PutData16), (8 bytes).
+    Removing hal_fsmc.o(.text.FSMC_GetData16), (16 bytes).
+    Removing hal_fsmc.o(.ARM.exidx.text.FSMC_GetData16), (8 bytes).
+    Removing hal_fsmc.o(.text.FSMC_PutData8), (16 bytes).
+    Removing hal_fsmc.o(.ARM.exidx.text.FSMC_PutData8), (8 bytes).
+    Removing hal_fsmc.o(.text.FSMC_GetData8), (16 bytes).
+    Removing hal_fsmc.o(.ARM.exidx.text.FSMC_GetData8), (8 bytes).
+    Removing hal_fsmc.o(.rodata.FSMC_BankBases), (16 bytes).
+    Removing hal_gpio.o(.text), (0 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_Init), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_ReadInDataBit), (10 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_ReadInDataBit), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_ReadInData), (6 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_ReadInData), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_ReadOutDataBit), (10 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_ReadOutDataBit), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_ReadOutData), (6 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_ReadOutData), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_SetBits), (4 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_SetBits), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_ClearBits), (4 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_ClearBits), (8 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_WriteBit), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_WriteBits), (4 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_WriteBits), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_PinLock), (16 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_PinLock), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_PinLockConf), (16 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_PinLockConf), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_PinAFConf), (114 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_PinAFConf), (8 bytes).
+    Removing hal_gpio.o(.text.GPIO_PortAFConfig), (6 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.GPIO_PortAFConfig), (8 bytes).
+    Removing hal_i2c.o(.text), (0 bytes).
+    Removing hal_i2c.o(.text.I2C_InitMaster), (118 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_InitMaster), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_Enable), (12 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_Enable), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_SetTargetAddr), (4 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_SetTargetAddr), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_GetTargetAddr), (8 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_GetTargetAddr), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_PutData), (4 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_PutData), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_PrepareToGetData), (8 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_PrepareToGetData), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_GetData), (6 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_GetData), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_GetStatus), (4 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_GetStatus), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_Stop), (12 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_Stop), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_EnableInterrupts), (16 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_EnableInterrupts), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_GetEnabledInterrupts), (4 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_GetEnabledInterrupts), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_GetInterruptStatus), (8 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_GetInterruptStatus), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_ClearInterruptStatus), (32 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_ClearInterruptStatus), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_MasterWriteBlocking), (140 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_MasterWriteBlocking), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_MasterReadBlocking), (144 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_MasterReadBlocking), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_MasterXfer), (30 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_MasterXfer), (8 bytes).
+    Removing hal_i2c.o(.text.I2C_MasterXferHandler), (244 bytes).
+    Removing hal_i2c.o(.ARM.exidx.text.I2C_MasterXferHandler), (8 bytes).
+    Removing hal_iwdg.o(.text), (0 bytes).
+    Removing hal_iwdg.o(.text.IWDG_Init), (30 bytes).
+    Removing hal_iwdg.o(.ARM.exidx.text.IWDG_Init), (8 bytes).
+    Removing hal_iwdg.o(.text.IWDG_DoReload), (8 bytes).
+    Removing hal_iwdg.o(.ARM.exidx.text.IWDG_DoReload), (8 bytes).
+    Removing hal_iwdg.o(.text.IWDG_Start), (8 bytes).
+    Removing hal_iwdg.o(.ARM.exidx.text.IWDG_Start), (8 bytes).
+    Removing hal_iwdg.o(.text.IWDG_GetStatus), (4 bytes).
+    Removing hal_iwdg.o(.ARM.exidx.text.IWDG_GetStatus), (8 bytes).
+    Removing hal_iwdg.o(.text.IWDG_EnableInterrupts), (20 bytes).
+    Removing hal_iwdg.o(.ARM.exidx.text.IWDG_EnableInterrupts), (8 bytes).
+    Removing hal_iwdg.o(.text.IWDG_ClearStatus), (16 bytes).
+    Removing hal_iwdg.o(.ARM.exidx.text.IWDG_ClearStatus), (8 bytes).
+    Removing hal_rcc.o(.text), (0 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_EnableAHB1Periphs), (8 bytes).
+    Removing hal_rcc.o(.text.RCC_EnableAHB2Periphs), (24 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_EnableAHB2Periphs), (8 bytes).
+    Removing hal_rcc.o(.text.RCC_EnableAHB3Periphs), (24 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_EnableAHB3Periphs), (8 bytes).
+    Removing hal_rcc.o(.text.RCC_EnableAPB1Periphs), (24 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_EnableAPB1Periphs), (8 bytes).
+    Removing hal_rcc.o(.text.RCC_EnableAPB2Periphs), (24 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_EnableAPB2Periphs), (8 bytes).
+    Removing hal_rcc.o(.text.RCC_ResetAHB1Periphs), (24 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_ResetAHB1Periphs), (8 bytes).
+    Removing hal_rcc.o(.text.RCC_ResetAHB2Periphs), (24 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_ResetAHB2Periphs), (8 bytes).
+    Removing hal_rcc.o(.text.RCC_ResetAHB3Periphs), (24 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_ResetAHB3Periphs), (8 bytes).
+    Removing hal_rcc.o(.text.RCC_ResetAPB1Periphs), (24 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_ResetAPB1Periphs), (8 bytes).
+    Removing hal_rcc.o(.text.RCC_ResetAPB2Periphs), (24 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_ResetAPB2Periphs), (8 bytes).
+    Removing hal_rcc.o(.text.RCC_MCOConf), (18 bytes).
+    Removing hal_rcc.o(.ARM.exidx.text.RCC_MCOConf), (8 bytes).
+    Removing hal_rtc.o(.text), (0 bytes).
+    Removing hal_rtc.o(.text.RTC_Init), (74 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_Init), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_EnableAccess), (22 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_EnableAccess), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_EnableReset), (22 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_EnableReset), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_GetStatus), (12 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_GetStatus), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_ClearStatus), (18 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_ClearStatus), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_GetClockStatus), (12 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_GetClockStatus), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_Enable), (22 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_Enable), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_EnableConf), (22 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_EnableConf), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_PutPrescalerData), (32 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_PutPrescalerData), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_PutCounterData), (32 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_PutCounterData), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_PutAlarmData), (32 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_PutAlarmData), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_GetCounterData), (18 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_GetCounterData), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_GetAlarmData), (18 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_GetAlarmData), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_EnableInterrupts), (24 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_EnableInterrupts), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_GetInterruptStatus), (12 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_GetInterruptStatus), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_ClearInterruptStatus), (18 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_ClearInterruptStatus), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_GetEnabledInterrupts), (12 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_GetEnabledInterrupts), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_JudgeLeapYear), (60 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_JudgeLeapYear), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_SetTimeBlocking), (442 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_SetTimeBlocking), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_CalcTimeBlocking), (362 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_CalcTimeBlocking), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_SetAlarmBlocking), (116 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_SetAlarmBlocking), (8 bytes).
+    Removing hal_rtc.o(.text.RTC_TimeHandler), (80 bytes).
+    Removing hal_rtc.o(.ARM.exidx.text.RTC_TimeHandler), (8 bytes).
+    Removing hal_rtc.o(.rodata.month_table), (12 bytes).
+    Removing hal_sdio.o(.text), (0 bytes).
+    Removing hal_sdio.o(.text.SDIO_Init), (90 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_Init), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_Enable), (18 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_Enable), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_SetDataBusWidth), (30 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_SetDataBusWidth), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_GetStatus), (28 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_GetStatus), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_ClearStatus), (6 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_ClearStatus), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_EnableInterrupts), (16 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_EnableInterrupts), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_EnableFifoDMA), (30 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_EnableFifoDMA), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_ExecuteCmd), (96 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_ExecuteCmd), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_ExecuteData), (42 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_ExecuteData), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_RequestResp), (134 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_RequestResp), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_PutFifoData), (6 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_PutFifoData), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_GetFifoData), (6 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_GetFifoData), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_ClearFifoData), (14 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_ClearFifoData), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_SwitchFifoWrite), (18 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_SwitchFifoWrite), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_SetFifoWatermark), (14 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_SetFifoWatermark), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_SetMultiBlockCount), (4 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_SetMultiBlockCount), (8 bytes).
+    Removing hal_sdio.o(.text.SDIO_EnableFifoReadWait), (14 bytes).
+    Removing hal_sdio.o(.ARM.exidx.text.SDIO_EnableFifoReadWait), (8 bytes).
+    Removing hal_spi.o(.text), (0 bytes).
+    Removing hal_spi.o(.text.SPI_SetBaudrate), (28 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_SetBaudrate), (8 bytes).
+    Removing hal_spi.o(.text.SPI_InitMaster), (138 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_InitMaster), (8 bytes).
+    Removing hal_spi.o(.text.SPI_Enable), (12 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_Enable), (8 bytes).
+    Removing hal_spi.o(.text.SPI_GetStatus), (4 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_GetStatus), (8 bytes).
+    Removing hal_spi.o(.text.SPI_EnableInterrupts), (16 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_EnableInterrupts), (8 bytes).
+    Removing hal_spi.o(.text.SPI_GetInterruptStatus), (4 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_GetInterruptStatus), (8 bytes).
+    Removing hal_spi.o(.text.SPI_ClearInterruptStatus), (4 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_ClearInterruptStatus), (8 bytes).
+    Removing hal_spi.o(.text.SPI_PutData), (4 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_PutData), (8 bytes).
+    Removing hal_spi.o(.text.SPI_GetData), (4 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_GetData), (8 bytes).
+    Removing hal_spi.o(.text.SPI_EnableDMA), (14 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_EnableDMA), (8 bytes).
+    Removing hal_spi.o(.text.SPI_GetEnabledInterrupts), (4 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_GetEnabledInterrupts), (8 bytes).
+    Removing hal_spi.o(.text.SPI_GetRxDataRegAddr), (4 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_GetRxDataRegAddr), (8 bytes).
+    Removing hal_spi.o(.text.SPI_GetTxDataRegAddr), (2 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_GetTxDataRegAddr), (8 bytes).
+    Removing hal_spi.o(.text.SPI_EnableCS), (6 bytes).
+    Removing hal_spi.o(.ARM.exidx.text.SPI_EnableCS), (8 bytes).
+    Removing hal_syscfg.o(.text), (0 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_SetBootMemMode), (16 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetBootMemMode), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_SetFSMCPinUseMode), (16 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetFSMCPinUseMode), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_SetFSMCMode), (16 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetFSMCMode), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_SetExtIntMux), (110 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetExtIntMux), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_SetI2C0PortMode), (16 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetI2C0PortMode), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_SetI2C1PortMode), (16 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetI2C1PortMode), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_SetENETPortMode), (16 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetENETPortMode), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_SetENETSpeedMode), (16 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetENETSpeedMode), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_EnablePVD), (50 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_EnablePVD), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_EnableVDT), (50 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_EnableVDT), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_EnableADCCheckVBatDiv3), (20 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_EnableADCCheckVBatDiv3), (8 bytes).
+    Removing hal_syscfg.o(.text.SYSCFG_SetVOSDelayValue), (10 bytes).
+    Removing hal_syscfg.o(.ARM.exidx.text.SYSCFG_SetVOSDelayValue), (8 bytes).
+    Removing hal_tim_16b.o(.text), (0 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_Init), (102 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_Init), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_Start), (10 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_Start), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_Stop), (10 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_Stop), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_GetCounterValue), (4 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_GetCounterValue), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_ClearCounterValue), (6 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_ClearCounterValue), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_EnableInterrupts), (16 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableInterrupts), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_EnableDMA), (16 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableDMA), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_DoSwTrigger), (4 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_DoSwTrigger), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_GetInterruptStatus), (4 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_GetInterruptStatus), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_ClearInterruptStatus), (10 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_ClearInterruptStatus), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_EnableOutputCompare), (184 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableOutputCompare), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_PutChannelValue), (8 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_PutChannelValue), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_EnableInputCapture), (166 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableInputCapture), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_GetChannelValue), (10 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_GetChannelValue), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_EnableDeadArea), (12 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableDeadArea), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_EnableMasterMode), (28 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableMasterMode), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_EnableSlaveMode), (38 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableSlaveMode), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_EnableExtTriggerIn), (50 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableExtTriggerIn), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_EnableDMABurst), (22 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_EnableDMABurst), (8 bytes).
+    Removing hal_tim_16b.o(.text.TIM_16B_GetEncoder), (16 bytes).
+    Removing hal_tim_16b.o(.ARM.exidx.text.TIM_16B_GetEncoder), (8 bytes).
+    Removing hal_tim_32b.o(.text), (0 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_Init), (102 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_Init), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_Start), (10 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_Start), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_Stop), (10 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_Stop), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_GetCounterValue), (4 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_GetCounterValue), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_ClearCounterValue), (6 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_ClearCounterValue), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_EnableInterrupts), (16 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableInterrupts), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_EnableDMA), (16 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableDMA), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_DoSwTrigger), (4 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_DoSwTrigger), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_GetInterruptStatus), (4 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_GetInterruptStatus), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_ClearInterruptStatus), (10 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_ClearInterruptStatus), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_EnableOutputCompare), (184 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableOutputCompare), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_PutChannelValue), (8 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_PutChannelValue), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_EnableInputCapture), (166 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableInputCapture), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_GetChannelValue), (8 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_GetChannelValue), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_EnableDeadArea), (12 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableDeadArea), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_EnableMasterMode), (28 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableMasterMode), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_EnableSlaveMode), (38 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableSlaveMode), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_EnableExtTriggerIn), (50 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableExtTriggerIn), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_EnableDMABurst), (22 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_EnableDMABurst), (8 bytes).
+    Removing hal_tim_32b.o(.text.TIM_32B_GetEncoder), (16 bytes).
+    Removing hal_tim_32b.o(.ARM.exidx.text.TIM_32B_GetEncoder), (8 bytes).
+    Removing hal_tim_adv.o(.text), (0 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_Init), (102 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_Init), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_Start), (10 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_Start), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_Stop), (10 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_Stop), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_GetCounterValue), (4 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_GetCounterValue), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_ClearCounterValue), (6 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_ClearCounterValue), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableInterrupts), (16 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableInterrupts), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableDMA), (16 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableDMA), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_DoSwTrigger), (4 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_DoSwTrigger), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_GetInterruptStatus), (4 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_GetInterruptStatus), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_ClearInterruptStatus), (10 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_ClearInterruptStatus), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableOutputCompare), (254 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableOutputCompare), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_PutChannelValue), (18 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_PutChannelValue), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableOutputCompareSwitch), (14 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableOutputCompareSwitch), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableInputCapture), (166 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableInputCapture), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_GetChannelValue), (10 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_GetChannelValue), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableDeadArea), (24 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableDeadArea), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableMasterMode), (28 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableMasterMode), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableSlaveMode), (38 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableSlaveMode), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableExtTriggerIn), (50 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableExtTriggerIn), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableDMABurst), (22 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableDMABurst), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_GetEncoder), (16 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_GetEncoder), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_SetRepCounter), (4 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_SetRepCounter), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_GetRepCounterValue), (8 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_GetRepCounterValue), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableIdleOut), (60 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableIdleOut), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableLock), (10 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableLock), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnableBreakIn), (4 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnableBreakIn), (8 bytes).
+    Removing hal_tim_adv.o(.text.TIM_ADV_EnablePWMShift), (52 bytes).
+    Removing hal_tim_adv.o(.ARM.exidx.text.TIM_ADV_EnablePWMShift), (8 bytes).
+    Removing hal_tim_basic.o(.text), (0 bytes).
+    Removing hal_tim_basic.o(.text.TIM_BASIC_Init), (54 bytes).
+    Removing hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_Init), (8 bytes).
+    Removing hal_tim_basic.o(.text.TIM_BASIC_Start), (10 bytes).
+    Removing hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_Start), (8 bytes).
+    Removing hal_tim_basic.o(.text.TIM_BASIC_Stop), (10 bytes).
+    Removing hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_Stop), (8 bytes).
+    Removing hal_tim_basic.o(.text.TIM_BASIC_GetCounterValue), (4 bytes).
+    Removing hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_GetCounterValue), (8 bytes).
+    Removing hal_tim_basic.o(.text.TIM_BASIC_EnableInterrupts), (16 bytes).
+    Removing hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_EnableInterrupts), (8 bytes).
+    Removing hal_tim_basic.o(.text.TIM_BASIC_EnableDMA), (16 bytes).
+    Removing hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_EnableDMA), (8 bytes).
+    Removing hal_tim_basic.o(.text.TIM_BASIC_DoSwTrigger), (4 bytes).
+    Removing hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_DoSwTrigger), (8 bytes).
+    Removing hal_tim_basic.o(.text.TIM_BASIC_GetInterruptStatus), (4 bytes).
+    Removing hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_GetInterruptStatus), (8 bytes).
+    Removing hal_tim_basic.o(.text.TIM_BASIC_ClearInterruptStatus), (10 bytes).
+    Removing hal_tim_basic.o(.ARM.exidx.text.TIM_BASIC_ClearInterruptStatus), (8 bytes).
+    Removing hal_uart.o(.text), (0 bytes).
+    Removing hal_uart.o(.text.UART_Init), (112 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_Init), (8 bytes).
+    Removing hal_uart.o(.text.UART_Enable), (12 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_Enable), (8 bytes).
+    Removing hal_uart.o(.text.UART_EnableInterrupts), (16 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_EnableInterrupts), (8 bytes).
+    Removing hal_uart.o(.text.UART_GetEnabledInterrupts), (4 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_GetEnabledInterrupts), (8 bytes).
+    Removing hal_uart.o(.text.UART_EnableDMA), (14 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_EnableDMA), (8 bytes).
+    Removing hal_uart.o(.text.UART_PutData), (4 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_PutData), (8 bytes).
+    Removing hal_uart.o(.text.UART_GetData), (6 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_GetData), (8 bytes).
+    Removing hal_uart.o(.text.UART_GetStatus), (4 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_GetStatus), (8 bytes).
+    Removing hal_uart.o(.text.UART_GetInterruptStatus), (4 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_GetInterruptStatus), (8 bytes).
+    Removing hal_uart.o(.text.UART_ClearInterruptStatus), (4 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_ClearInterruptStatus), (8 bytes).
+    Removing hal_uart.o(.text.UART_GetRxDataRegAddr), (4 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_GetRxDataRegAddr), (8 bytes).
+    Removing hal_uart.o(.text.UART_GetTxDataRegAddr), (2 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_GetTxDataRegAddr), (8 bytes).
+    Removing hal_usb.o(.text), (0 bytes).
+    Removing hal_usb.o(.text.USB_SetBufDespTableAddr), (26 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_SetBufDespTableAddr), (8 bytes).
+    Removing hal_usb.o(.text.USB_InitDevice), (58 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_InitDevice), (8 bytes).
+    Removing hal_usb.o(.text.USB_SetDeviceAddr), (14 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_SetDeviceAddr), (8 bytes).
+    Removing hal_usb.o(.text.USB_Enable), (16 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_Enable), (8 bytes).
+    Removing hal_usb.o(.text.USB_EnableInterrupts), (20 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_EnableInterrupts), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetEnabledInterrupts), (6 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetEnabledInterrupts), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetInterruptStatus), (12 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetInterruptStatus), (8 bytes).
+    Removing hal_usb.o(.text.USB_ClearInterruptStatus), (12 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_ClearInterruptStatus), (8 bytes).
+    Removing hal_usb.o(.text.USB_EnableErrInterrupts), (20 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_EnableErrInterrupts), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetEnabledErrInterrupts), (6 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetEnabledErrInterrupts), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetErrInterruptStatus), (22 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetErrInterruptStatus), (8 bytes).
+    Removing hal_usb.o(.text.USB_ClearErrInterruptStatus), (12 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_ClearErrInterruptStatus), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetBufDespIndex), (8 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetBufDespIndex), (8 bytes).
+    Removing hal_usb.o(.text.USB_EnableOddEvenReset), (18 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_EnableOddEvenReset), (8 bytes).
+    Removing hal_usb.o(.text.USB_EnableResumeSignal), (18 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_EnableResumeSignal), (8 bytes).
+    Removing hal_usb.o(.text.USB_EnableSuspend), (18 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_EnableSuspend), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetDeviceAddr), (10 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetDeviceAddr), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetBufDespTableAddr), (30 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetBufDespTableAddr), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetFrameNumber), (14 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetFrameNumber), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetBufDesp), (44 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetBufDesp), (8 bytes).
+    Removing hal_usb.o(.text.USB_BufDesp_GetTokenPid), (8 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_BufDesp_GetTokenPid), (8 bytes).
+    Removing hal_usb.o(.text.USB_BufDesp_GetPacketAddr), (4 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_BufDesp_GetPacketAddr), (8 bytes).
+    Removing hal_usb.o(.text.USB_BufDesp_GetPacketSize), (8 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_BufDesp_GetPacketSize), (8 bytes).
+    Removing hal_usb.o(.text.USB_BufDesp_Reset), (12 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_BufDesp_Reset), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetEndPointIndex), (10 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetEndPointIndex), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetXferDirection), (10 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetXferDirection), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetBufDespOddEven), (10 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetBufDespOddEven), (8 bytes).
+    Removing hal_usb.o(.text.USB_BufDesp_Xfer), (52 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_BufDesp_Xfer), (8 bytes).
+    Removing hal_usb.o(.text.USB_BufDesp_IsBusy), (6 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_BufDesp_IsBusy), (8 bytes).
+    Removing hal_usb.o(.text.USB_EnableEndPoint), (130 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_EnableEndPoint), (8 bytes).
+    Removing hal_usb.o(.text.USB_EnableEndPointStall), (158 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_EnableEndPointStall), (8 bytes).
+    Removing hal_usb.o(.text.USB_GetEnabledEndPointStall), (40 bytes).
+    Removing hal_usb.o(.ARM.exidx.text.USB_GetEnabledEndPointStall), (8 bytes).
+    Removing hal_wwdg.o(.text), (0 bytes).
+    Removing hal_wwdg.o(.text.WWDG_Init), (22 bytes).
+    Removing hal_wwdg.o(.ARM.exidx.text.WWDG_Init), (8 bytes).
+    Removing hal_wwdg.o(.text.WWDG_Start), (10 bytes).
+    Removing hal_wwdg.o(.ARM.exidx.text.WWDG_Start), (8 bytes).
+    Removing hal_wwdg.o(.text.WWDG_Reload), (16 bytes).
+    Removing hal_wwdg.o(.ARM.exidx.text.WWDG_Reload), (8 bytes).
+    Removing hal_wwdg.o(.text.WWDG_EnableInterrupts), (22 bytes).
+    Removing hal_wwdg.o(.ARM.exidx.text.WWDG_EnableInterrupts), (8 bytes).
+    Removing hal_wwdg.o(.text.WWDG_GetStatus), (4 bytes).
+    Removing hal_wwdg.o(.ARM.exidx.text.WWDG_GetStatus), (8 bytes).
+    Removing hal_wwdg.o(.text.WWDG_ClearStatus), (10 bytes).
+    Removing hal_wwdg.o(.ARM.exidx.text.WWDG_ClearStatus), (8 bytes).
+
+645 unused section(s) (total 12346 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry7.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_hlt.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch_hlt.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit5.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ../fplib/fpinit_empty.s                  0x00000000   Number         0  fpinit_empty.o ABSOLUTE
+    ..\3_MM32F327x\mdk\startup_mm32f3277g.s  0x00000000   Number         0  startup_mm32f3277g.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    drv_led.c                                0x00000000   Number         0  drv_led.o ABSOLUTE
+    drv_sysclk.c                             0x00000000   Number         0  drv_sysclk.o ABSOLUTE
+    drv_systick.c                            0x00000000   Number         0  drv_systick.o ABSOLUTE
+    hal_adc.c                                0x00000000   Number         0  hal_adc.o ABSOLUTE
+    hal_comp.c                               0x00000000   Number         0  hal_comp.o ABSOLUTE
+    hal_dac.c                                0x00000000   Number         0  hal_dac.o ABSOLUTE
+    hal_dma.c                                0x00000000   Number         0  hal_dma.o ABSOLUTE
+    hal_exti.c                               0x00000000   Number         0  hal_exti.o ABSOLUTE
+    hal_fsmc.c                               0x00000000   Number         0  hal_fsmc.o ABSOLUTE
+    hal_gpio.c                               0x00000000   Number         0  hal_gpio.o ABSOLUTE
+    hal_i2c.c                                0x00000000   Number         0  hal_i2c.o ABSOLUTE
+    hal_iwdg.c                               0x00000000   Number         0  hal_iwdg.o ABSOLUTE
+    hal_rcc.c                                0x00000000   Number         0  hal_rcc.o ABSOLUTE
+    hal_rtc.c                                0x00000000   Number         0  hal_rtc.o ABSOLUTE
+    hal_sdio.c                               0x00000000   Number         0  hal_sdio.o ABSOLUTE
+    hal_spi.c                                0x00000000   Number         0  hal_spi.o ABSOLUTE
+    hal_syscfg.c                             0x00000000   Number         0  hal_syscfg.o ABSOLUTE
+    hal_tim_16b.c                            0x00000000   Number         0  hal_tim_16b.o ABSOLUTE
+    hal_tim_32b.c                            0x00000000   Number         0  hal_tim_32b.o ABSOLUTE
+    hal_tim_adv.c                            0x00000000   Number         0  hal_tim_adv.o ABSOLUTE
+    hal_tim_basic.c                          0x00000000   Number         0  hal_tim_basic.o ABSOLUTE
+    hal_uart.c                               0x00000000   Number         0  hal_uart.o ABSOLUTE
+    hal_usb.c                                0x00000000   Number         0  hal_usb.o ABSOLUTE
+    hal_wwdg.c                               0x00000000   Number         0  hal_wwdg.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    system_mm32f3277g.c                      0x00000000   Number         0  system_mm32f3277g.o ABSOLUTE
+    RESET                                    0x08000000   Section      400  startup_mm32f3277g.o(RESET)
+    !!!main                                  0x08000400   Section        8  __main.o(!!!main)
+    !!!scatter                               0x08000408   Section       52  __scatter.o(!!!scatter)
+    !!handler_zi                             0x0800043c   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x08000458   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$0000000A          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000011          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$0000002C          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x0800045a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000033          0x0800045a   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    .ARM.Collect$$libshutdown$$00000000      0x0800045c   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x0800045e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x0800045e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x0800045e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x0800045e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x0800045e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x0800045e   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x0800045e   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x08000460   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x08000460   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000007          0x08000460   Section        4  __rtentry7.o(.ARM.Collect$$rtentry$$00000007)
+    .ARM.Collect$$rtentry$$00000009          0x08000464   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x08000464   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x08000468   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x08000468   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __lit__00000000                          0x08000470   Data           4  __rtentry7.o(.ARM.Collect$$rtentry$$00002718)
+    .ARM.Collect$$rtentry$$00002718          0x08000470   Section        4  __rtentry7.o(.ARM.Collect$$rtentry$$00002718)
+    .ARM.Collect$$rtexit$$00000000           0x08000474   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x08000476   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x08000476   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x0800047a   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x08000480   Section       36  startup_mm32f3277g.o(.text)
+    .text                                    0x080004a4   Section        0  exit.o(.text)
+    .text                                    0x080004b6   Section        2  use_no_semi.o(.text)
+    .text                                    0x080004b8   Section        0  indicate_semi.o(.text)
+    .text                                    0x080004b8   Section        0  sys_exit.o(.text)
+    [Anonymous Symbol]                       0x080004c4   Section        0  drv_sysclk.o(.text.Drv_GetSysClockFreq)
+    [Anonymous Symbol]                       0x08000528   Section        0  drv_led.o(.text.Drv_LED_Init)
+    [Anonymous Symbol]                       0x08000558   Section        0  drv_led.o(.text.Drv_LED_Write)
+    [Anonymous Symbol]                       0x08000574   Section        0  drv_systick.o(.text.Drv_SysTick_Config)
+    [Anonymous Symbol]                       0x080005ec   Section        0  hal_gpio.o(.text.GPIO_Init)
+    [Anonymous Symbol]                       0x0800067c   Section        0  hal_gpio.o(.text.GPIO_WriteBit)
+    [Anonymous Symbol]                       0x08000688   Section        0  drv_systick.o(.text.HAL_Delay)
+    [Anonymous Symbol]                       0x080006b4   Section        0  hal_rcc.o(.text.RCC_EnableAHB1Periphs)
+    [Anonymous Symbol]                       0x080006cc   Section        0  drv_systick.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x080006dc   Section        0  drv_sysclk.o(.text.SystemClockConfig)
+    [Anonymous Symbol]                       0x080007c0   Section        0  system_mm32f3277g.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x080007c4   Section        0  main.o(.text.main)
+    uwTick                                   0x20000000   Data           4  drv_systick.o(.bss.uwTick)
+    [Anonymous Symbol]                       0x20000000   Section        0  drv_systick.o(.bss.uwTick)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __fp_init_empty                          0x00000000   Number         0  fpinit_empty.o ABSOLUTE
+    Image$$ZI$$Limit                          - Undefined Weak Reference
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_Size                           0x00000190   Number         0  startup_mm32f3277g.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_mm32f3277g.o(RESET)
+    __Vectors_End                            0x08000190   Data           0  startup_mm32f3277g.o(RESET)
+    __main                                   0x08000401   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x08000409   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x08000409   Thumb Code    44  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x08000409   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x08000417   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_zeroinit                   0x0800043d   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x08000459   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_argv_1                     0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_atexit_1                   0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_clock_1                    0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_cpp_1                      0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_exceptions_1               0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_fp_1                       0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_getenv_1                   0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_heap_1                     0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_init_lc_collate_1               0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_ctype_1                 0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_monetary_1              0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_numeric_1               0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_time_1                  0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_preinit_1                  0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_rand_1                     0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_init_return                     0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    __rt_lib_init_signal_1                   0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_stdio_1                    0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_user_alloc_1               0x0800045b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_shutdown                        0x0800045d   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x0800045f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x0800045f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x0800045f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x0800045f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x0800045f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x0800045f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x0800045f   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x08000461   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x08000461   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x08000461   Thumb Code     0  __rtentry7.o(.ARM.Collect$$rtentry$$00000007)
+    __rt_entry_li                            0x08000465   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x08000465   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x08000469   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x08000469   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x08000475   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x08000477   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x08000477   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x0800047b   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x08000481   Thumb Code     8  startup_mm32f3277g.o(.text)
+    NMI_Handler                              0x08000489   Thumb Code     2  startup_mm32f3277g.o(.text)
+    HardFault_Handler                        0x0800048b   Thumb Code     2  startup_mm32f3277g.o(.text)
+    MemManage_Handler                        0x0800048d   Thumb Code     2  startup_mm32f3277g.o(.text)
+    BusFault_Handler                         0x0800048f   Thumb Code     2  startup_mm32f3277g.o(.text)
+    UsageFault_Handler                       0x08000491   Thumb Code     2  startup_mm32f3277g.o(.text)
+    SVC_Handler                              0x08000493   Thumb Code     2  startup_mm32f3277g.o(.text)
+    DebugMon_Handler                         0x08000495   Thumb Code     2  startup_mm32f3277g.o(.text)
+    PendSV_Handler                           0x08000497   Thumb Code     2  startup_mm32f3277g.o(.text)
+    ADC1_2_IRQHandler                        0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    ADC3_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    CAN1_RX_IRQHandler                       0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    COMP1_2_IRQHandler                       0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA1_Channel1_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA1_Channel2_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA1_Channel3_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA1_Channel4_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA1_Channel5_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA1_Channel6_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA1_Channel7_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA2_Channel1_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA2_Channel2_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA2_Channel3_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA2_Channel4_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    DMA2_Channel5_IRQHandler                 0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    ETH_IRQHandler                           0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    EXTI0_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    EXTI15_10_IRQHandler                     0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    EXTI1_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    EXTI2_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    EXTI3_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    EXTI4_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    EXTI9_5_IRQHandler                       0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    FLASH_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    FlashCache_IRQHandler                    0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    I2C1_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    I2C2_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    OTG_FS_IRQHandler                        0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    OTG_FS_WKUP_IRQHandler                   0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    PVD_IRQHandler                           0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    RCC_CRS_IRQHandler                       0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    RTCAlarm_IRQHandler                      0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    RTC_IRQHandler                           0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    SDIO_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    SPI1_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    SPI2_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    SPI3_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TAMPER_IRQHandler                        0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM1_BRK_IRQHandler                      0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM1_CC_IRQHandler                       0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM1_UP_IRQHandler                       0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM2_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM3_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM4_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM5_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM6_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM7_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM8_BRK_IRQHandler                      0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM8_CC_IRQHandler                       0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM8_TRG_COM_IRQHandler                  0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    TIM8_UP_IRQHandler                       0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    UART1_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    UART2_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    UART3_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    UART4_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    UART5_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    UART6_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    UART7_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    UART8_IRQHandler                         0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    WWDG_IRQHandler                          0x0800049b   Thumb Code     0  startup_mm32f3277g.o(.text)
+    exit                                     0x080004a5   Thumb Code    18  exit.o(.text)
+    __I$use$semihosting                      0x080004b7   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x080004b7   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x080004b9   Thumb Code     0  indicate_semi.o(.text)
+    _sys_exit                                0x080004b9   Thumb Code     8  sys_exit.o(.text)
+    Drv_GetSysClockFreq                      0x080004c5   Thumb Code   100  drv_sysclk.o(.text.Drv_GetSysClockFreq)
+    Drv_LED_Init                             0x08000529   Thumb Code    48  drv_led.o(.text.Drv_LED_Init)
+    Drv_LED_Write                            0x08000559   Thumb Code    28  drv_led.o(.text.Drv_LED_Write)
+    Drv_SysTick_Config                       0x08000575   Thumb Code   120  drv_systick.o(.text.Drv_SysTick_Config)
+    GPIO_Init                                0x080005ed   Thumb Code   144  hal_gpio.o(.text.GPIO_Init)
+    GPIO_WriteBit                            0x0800067d   Thumb Code    12  hal_gpio.o(.text.GPIO_WriteBit)
+    HAL_Delay                                0x08000689   Thumb Code    42  drv_systick.o(.text.HAL_Delay)
+    RCC_EnableAHB1Periphs                    0x080006b5   Thumb Code    24  hal_rcc.o(.text.RCC_EnableAHB1Periphs)
+    SysTick_Handler                          0x080006cd   Thumb Code    16  drv_systick.o(.text.SysTick_Handler)
+    SystemClockConfig                        0x080006dd   Thumb Code   228  drv_sysclk.o(.text.SystemClockConfig)
+    SystemInit                               0x080007c1   Thumb Code     2  system_mm32f3277g.o(.text.SystemInit)
+    main                                     0x080007c5   Thumb Code    46  main.o(.text.main)
+    Region$$Table$$Base                      0x080007f4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000804   Number         0  anon$$obj.o(Region$$Table)
+    Image$$ARM_LIB_HEAP$$ZI$$Base            0x20000004   Number         0  anon$$obj.o ABSOLUTE
+    Image$$ARM_LIB_HEAP$$ZI$$Limit           0x20000404   Number         0  anon$$obj.o ABSOLUTE
+    Image$$ARM_LIB_STACK$$ZI$$Limit          0x20020000   Number         0  anon$$obj.o ABSOLUTE
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x08000401
+
+  Load Region LR_m_text (Base: 0x08000000, Size: 0x00000804, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region VECTOR_ROM (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000190, Max: 0x00000400, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000190   Data   RO           53    RESET               startup_mm32f3277g.o
+
+
+    Execution Region ER_m_text (Exec base: 0x08000400, Load base: 0x08000400, Size: 0x00000404, Max: 0x0007fc00, ABSOLUTE, FIXED)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000400   0x08000400   0x00000008   Code   RO          848  * !!!main             c_w.l(__main.o)
+    0x08000408   0x08000408   0x00000034   Code   RO         1024    !!!scatter          c_w.l(__scatter.o)
+    0x0800043c   0x0800043c   0x0000001c   Code   RO         1026    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x08000458   0x08000458   0x00000002   Code   RO          880    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          891    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          893    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          896    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          898    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          900    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          903    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          905    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          907    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          909    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          911    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          913    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          915    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          917    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          919    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          921    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          923    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          927    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          929    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          931    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000000   Code   RO          933    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x0800045a   0x0800045a   0x00000002   Code   RO          934    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x0800045c   0x0800045c   0x00000002   Code   RO          963    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x0800045e   0x0800045e   0x00000000   Code   RO          975    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x0800045e   0x0800045e   0x00000000   Code   RO          977    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x0800045e   0x0800045e   0x00000000   Code   RO          980    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x0800045e   0x0800045e   0x00000000   Code   RO          983    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x0800045e   0x0800045e   0x00000000   Code   RO          985    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x0800045e   0x0800045e   0x00000000   Code   RO          988    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x0800045e   0x0800045e   0x00000002   Code   RO          989    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x08000460   0x08000460   0x00000000   Code   RO          850    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x08000460   0x08000460   0x00000000   Code   RO          852    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x08000460   0x08000460   0x00000004   Code   RO          866    .ARM.Collect$$rtentry$$00000007  c_w.l(__rtentry7.o)
+    0x08000464   0x08000464   0x00000000   Code   RO          854    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x08000464   0x08000464   0x00000004   Code   RO          855    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x08000468   0x08000468   0x00000000   Code   RO          857    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x08000468   0x08000468   0x00000008   Code   RO          858    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x08000470   0x08000470   0x00000004   Code   RO          867    .ARM.Collect$$rtentry$$00002718  c_w.l(__rtentry7.o)
+    0x08000474   0x08000474   0x00000002   Code   RO          888    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000476   0x08000476   0x00000000   Code   RO          943    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000476   0x08000476   0x00000004   Code   RO          944    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x0800047a   0x0800047a   0x00000006   Code   RO          945    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x08000480   0x08000480   0x00000024   Code   RO           54    .text               startup_mm32f3277g.o
+    0x080004a4   0x080004a4   0x00000012   Code   RO          873    .text               c_w.l(exit.o)
+    0x080004b6   0x080004b6   0x00000002   Code   RO          939    .text               c_w.l(use_no_semi.o)
+    0x080004b8   0x080004b8   0x00000000   Code   RO          941    .text               c_w.l(indicate_semi.o)
+    0x080004b8   0x080004b8   0x0000000c   Code   RO          953    .text               c_w.l(sys_exit.o)
+    0x080004c4   0x080004c4   0x00000064   Code   RO           27    .text.Drv_GetSysClockFreq  drv_sysclk.o
+    0x08000528   0x08000528   0x00000030   Code   RO           13    .text.Drv_LED_Init  drv_led.o
+    0x08000558   0x08000558   0x0000001c   Code   RO           15    .text.Drv_LED_Write  drv_led.o
+    0x08000574   0x08000574   0x00000078   Code   RO           37    .text.Drv_SysTick_Config  drv_systick.o
+    0x080005ec   0x080005ec   0x00000090   Code   RO          250    .text.GPIO_Init     hal_gpio.o
+    0x0800067c   0x0800067c   0x0000000c   Code   RO          264    .text.GPIO_WriteBit  hal_gpio.o
+    0x08000688   0x08000688   0x0000002a   Code   RO           43    .text.HAL_Delay     drv_systick.o
+    0x080006b2   0x080006b2   0x00000002   PAD
+    0x080006b4   0x080006b4   0x00000018   Code   RO          346    .text.RCC_EnableAHB1Periphs  hal_rcc.o
+    0x080006cc   0x080006cc   0x00000010   Code   RO           39    .text.SysTick_Handler  drv_systick.o
+    0x080006dc   0x080006dc   0x000000e4   Code   RO           25    .text.SystemClockConfig  drv_sysclk.o
+    0x080007c0   0x080007c0   0x00000002   Code   RO           61    .text.SystemInit    system_mm32f3277g.o
+    0x080007c2   0x080007c2   0x00000002   PAD
+    0x080007c4   0x080007c4   0x0000002e   Code   RO            4    .text.main          main.o
+    0x080007f2   0x080007f2   0x00000002   PAD
+    0x080007f4   0x080007f4   0x00000010   Data   RO         1023    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_m_data (Exec base: 0x20000000, Load base: 0x08000804, Size: 0x00000004, Max: 0x0001f800, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000        -       0x00000004   Zero   RW           45    .bss.uwTick         drv_systick.o
+
+
+    Execution Region ARM_LIB_HEAP (Exec base: 0x20000004, Load base: 0x08000804, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000004        -       0x00000400   Zero   RW            1    ARM_LIB_HEAP.bss    anon$$obj.o
+
+
+    Execution Region ARM_LIB_STACK (Exec base: 0x2001fc00, Load base: 0x08000804, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x2001fc00        -       0x00000400   Zero   RW            2    ARM_LIB_STACK.bss   anon$$obj.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        76          0          0          0          0       1915   drv_led.o
+       328          4          0          0          0       2347   drv_sysclk.o
+       178          0          0          0          4       4762   drv_systick.o
+       156          0          0          0          0       4194   hal_gpio.o
+        24          0          0          0          0       3205   hal_rcc.o
+        46          0          0          0          0        565   main.o
+        36          8        400          0          0        848   startup_mm32f3277g.o
+         2          0          0          0          0        424   system_mm32f3277g.o
+
+    ----------------------------------------------------------------------
+       852         12        416          0       2052      18260   Object Totals
+         0          0         16          0       2048          0   (incl. Generated)
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         8          4          0          0          0          0   __rtentry7.o
+        52          8          0          0          0          0   __scatter.o
+        28          0          0          0          0          0   __scatter_zi.o
+        18          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       160         16          0          0          0        284   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       160         16          0          0          0        284   c_w.l
+
+    ----------------------------------------------------------------------
+       160         16          0          0          0        284   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      1012         28        416          0       2052      18428   Grand Totals
+      1012         28        416          0       2052      18428   ELF Image Totals
+      1012         28        416          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 1428 (   1.39kB)
+    Total RW  Size (RW Data + ZI Data)              2052 (   2.00kB)
+    Total ROM Size (Code + RO Data + RW Data)       1428 (   1.39kB)
+
+==============================================================================
+

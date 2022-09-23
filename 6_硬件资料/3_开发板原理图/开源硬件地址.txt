@@ -1,0 +1,2 @@
+开源地址：https://oshwhub.com/100ask_mcu/pitaya_lite
+开源协议: CC-BY-NC 3.0

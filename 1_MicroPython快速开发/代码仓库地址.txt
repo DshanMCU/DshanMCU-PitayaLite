@@ -1,0 +1,4 @@
+本次资料于2022年9月1日从仓库更新，
+后续如果仓库更新，用户请访问以下网址，
+第一时间获取最新资料。
+https://gitee.com/slhking/pitaya-micropython.git

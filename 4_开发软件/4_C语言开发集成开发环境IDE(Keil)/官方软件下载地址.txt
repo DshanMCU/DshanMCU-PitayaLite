@@ -1,0 +1,5 @@
+本次资料于2022年7月22日从官网更新，
+后续如果官网更新，用户请访问以下网址，
+第一时间获取最新资料。
+Keil MDK：https://www.keil.com/download/product/
+MM32 Pack：https://mindmotion.com.cn/support/software/keil_pack/
